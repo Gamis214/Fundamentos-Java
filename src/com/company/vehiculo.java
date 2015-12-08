@@ -26,6 +26,14 @@ public class vehiculo {
         v.setMatricula(st.toString());
     }
 
+    public String getAtributos(){
+        return "Matricula: " + this.matricula +
+                " Modelo: " + this.modelo +
+                " Color: " + this.color +
+                " tarifa: " + this.tarifa +
+                " disponible: " + this.disponible;
+    }
+
     public String getMatricula() {
         return matricula;
     }

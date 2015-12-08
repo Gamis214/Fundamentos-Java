@@ -1,5 +1,9 @@
 package com.company;
 
+import com.company.ClasesHijas.Deportivos;
+import com.company.ClasesHijas.Furgoneta;
+import com.company.ClasesHijas.Turismo;
+
 public class Main {
 
     public static void main(String[] args) {
@@ -65,6 +69,26 @@ public class Main {
                 vehiculoAlquilado.getVehiculo().getColor() +" ");
         //********************************************************************
 
+        //******************* EJERCICIO 2 ************************************
+        //TODO Ejercicio No.2
+
+        //Generamos las clases Deportivos,Furgoneta y Turismo y creamos los vehiculos
+        System.out.println("**********************************************");
+
+        vehiculo miVehiculo = new vehiculo("FEFE","BMW","2008","VERDE",0.00,true);
+        Turismo miTurismo = new Turismo("GEGI","DODGE","2011","GRIS",0.00,true,4,true);
+        Furgoneta miFurgoneta = new Furgoneta("KEKE","GT","2000","AZUL",0.00,true,50,15);
+        Deportivos miDeportivo = new Deportivos("DEDE","FERRARI","2020","ROJO",0.00,true,80);
+
+        //Mandamos a llamar el getAtributos de cada Objeto
+        System.out.println(miVehiculo.getAtributos());
+        System.out.println(miTurismo.getAtributos());
+        System.out.println(miFurgoneta.getAtributos());
+        System.out.println(miDeportivo.getAtributos());
+
+        System.out.println("**********************************************");
+
+        //********************************************************************
 
     }
 }
