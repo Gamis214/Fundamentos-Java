@@ -3,6 +3,7 @@ package com.company;
 import com.company.ClasesHijas.Deportivos;
 import com.company.ClasesHijas.Furgoneta;
 import com.company.ClasesHijas.Turismo;
+import com.sun.xml.internal.bind.v2.schemagen.xmlschema.List;
 
 public class Main {
 
@@ -76,13 +77,26 @@ public class Main {
         System.out.println("**********************************************");
 
         vehiculo miVehiculo = new vehiculo("FEFE","BMW","2008","VERDE",0.00,true);
+
+        //Metodo No.1 ***********************
         Turismo miTurismo = new Turismo("GEGI","DODGE","2011","GRIS",0.00,true,4,true);
+        //Metodo No.2
+        vehiculo miTurismo2 = new Turismo("GEGI","DODGE","2011","GRIS",0.00,true,4,true);
+        //Metodo No.3
+        vehiculo miTurismo3 = miTurismo;
+        //Metodo No.4
+        Turismo miNuevoTurismo = (Turismo) miTurismo2;
+        //***********************************
+
         Furgoneta miFurgoneta = new Furgoneta("KEKE","GT","2000","AZUL",0.00,true,50,15);
         Deportivos miDeportivo = new Deportivos("DEDE","FERRARI","2020","ROJO",0.00,true,80);
 
         //Mandamos a llamar el getAtributos de cada Objeto
         System.out.println(miVehiculo.getAtributos());
         System.out.println(miTurismo.getAtributos());
+        System.out.println(miTurismo2.getAtributos());
+        System.out.println(miTurismo3.getAtributos());
+        System.out.println(miNuevoTurismo.getAtributos());
         System.out.println(miFurgoneta.getAtributos());
         System.out.println(miDeportivo.getAtributos());
 
