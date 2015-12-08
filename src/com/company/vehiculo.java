@@ -2,9 +2,9 @@ package com.company;
 
 public class vehiculo {
 
-    String matricula,marca,modelo,color;
-    double tarifa;
-    boolean disponible;
+    private String matricula,marca,modelo,color;
+    private double tarifa;
+    private boolean disponible;
 
     public vehiculo(String matricula,String marca, String modelo, String color,double tarifa, boolean disponible){
         this.matricula = matricula;
@@ -13,6 +13,17 @@ public class vehiculo {
         this.color = color;
         this.tarifa = tarifa;
         this.disponible = disponible;
+    }
+
+    public void cambiarMatricula(vehiculo v,String Matricula){
+        v.setMatricula(Matricula);
+    }
+
+    public void cambiarMatricula(vehiculo v,String Matricula,String Iniciales){
+        StringBuilder st = new StringBuilder();
+        st.append(Matricula + " - ");
+        st.append(Iniciales);
+        v.setMatricula(st.toString());
     }
 
     public String getMatricula() {
